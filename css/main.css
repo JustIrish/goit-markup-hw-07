@@ -1,11 +1,3 @@
-/* основной цвет текста #212121 */
-/* вторичный цвет текста #757575 */
-/* акцент #2196F3 */
-/* цвет активной кнопки #188CE8 */
-/* цвет фона #FFFFFF */
-/* цвет заливки секции #2F303A
-            #F5F4FA */
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -24,6 +16,11 @@ h3,
 h4 {
   margin: 0;
 }
+
+button {
+  cursor: pointer;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -33,7 +30,6 @@ img {
 body {
   color: var(--primary-text-color);
   background-color: var(--main-backgr-color);
-
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -58,13 +54,46 @@ body {
   margin: -1px;
 }
 
-/*------------------ВЕРХНЯЯ ЛИНИЯ----------------- */
-
 .conteiner {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding: 0 15px;
+}
+
+.btn {
+  color: var(--second-text-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  min-width: 200px;
+  border: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #188ce8;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.work-title,
+.team-title,
+.clients-title {
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
 }
 
 .header {
@@ -98,7 +127,6 @@ body {
 .logo {
   color: var(--accent-color);
   text-decoration: none;
-
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -119,10 +147,8 @@ body {
 .link {
   display: block;
   padding: 32px 0;
-
   color: var(--title-text-color);
   text-decoration: none;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -154,10 +180,8 @@ body {
   display: flex;
   align-items: center;
   padding: 32px 0;
-
   color: var(--primary-text-color);
   text-decoration: none;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -165,8 +189,6 @@ body {
   margin-right: 10px;
   fill: currentColor;
 }
-
-/* --------------------СЕКЦИЯ ШАПКА---------------------- */
 
 .hero {
   max-width: 1600px;
@@ -176,11 +198,7 @@ body {
   background-color: var(--special-backgr-color);
   text-align: center;
   padding: 200px 0;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../img/hero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -189,9 +207,7 @@ body {
 .hero-title {
   max-width: 696px;
   margin: 0 auto 30px;
-
   color: var(--second-text-color);
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -200,43 +216,13 @@ body {
   text-align: center;
 }
 
-.btn {
-  color: var(--second-text-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 10px 0;
-  min-width: 200px;
-  border: 0;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: #188ce8;
-}
-
-/* -------------------СЕКЦИИ------------------ */
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .benefits-list {
   display: flex;
   margin-left: -30px;
 }
 
 .benefits-item {
-  width: calc(100% / 4 - 30px);
+  width: calc(25% - 30px);
   margin-left: 30px;
 }
 
@@ -246,7 +232,6 @@ body {
   height: 120px;
   align-items: center;
   justify-content: center;
-
   background-color: var(--portfolio-backgr-color);
   border-radius: 4px;
   margin-bottom: 30px;
@@ -255,7 +240,6 @@ body {
 .benefits-title {
   margin-bottom: 10px;
   color: var(--title-text-color);
-
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -275,7 +259,7 @@ body {
 }
 
 .work-item {
-  width: calc(100% / 3 - 30px);
+  width: calc(33.3333333333% - 30px);
   margin-left: 30px;
 }
 
@@ -290,26 +274,12 @@ body {
   padding: 27px 0;
   color: var(--second-text-color);
   background-color: rgba(47, 48, 58, 0.8);
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
 }
-
-.work-title,
-.team-title,
-.clients-title {
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
-
-/* ---------------------СЕКЦИЯ КОМАНДА--------------------- */
 
 .team {
   background-color: var(--portfolio-backgr-color);
@@ -321,12 +291,10 @@ body {
 }
 
 .team-card {
-  flex-basis: calc(100% / 4 - 30px);
+  flex-basis: calc(25% - 30px);
   margin: 15px;
-
   background-color: var(--main-backgr-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -337,7 +305,6 @@ body {
 .team-name {
   margin-bottom: 10px;
   color: var(--title-text-color);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -374,7 +341,6 @@ body {
   height: 100%;
   border-radius: 50%;
   color: var(--link-color);
-
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -389,8 +355,6 @@ body {
   background-color: var(--accent-color);
   color: var(--second-text-color);
 }
-
-/* ---------------------СЕКЦИЯ КЛИЕНТЫ--------------------- */
 
 .clients-icon-list {
   display: flex;
@@ -415,9 +379,7 @@ body {
   border-radius: 4px;
   color: var(--link-color);
   border: 1px solid var(--link-color);
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -429,7 +391,6 @@ body {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
-/* ---------------------ПОРТФОЛИО--------------------- */
 
 .filter {
   display: flex;
@@ -445,7 +406,6 @@ body {
   color: var(--title-text-color);
   background-color: var(--portfolio-backgr-color);
   cursor: pointer;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -454,7 +414,6 @@ body {
   padding: 6px 22px;
   min-width: 73px;
   border: 1px solid transparent;
-
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -464,8 +423,7 @@ body {
 .filter-btn:focus {
   color: var(--second-text-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-link {
@@ -479,7 +437,7 @@ body {
 }
 
 .portfolio-item {
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(33.3333333333% - 30px);
   margin: 15px;
 }
 
@@ -491,14 +449,12 @@ body {
 .product-desc {
   position: absolute;
   top: 0;
-
   padding: 63px 24px;
   height: 100%;
   font-size: 18px;
   line-height: 1.56;
   color: var(--second-text-color);
   background-color: rgba(33, 150, 243, 0.9);
-
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -517,7 +473,6 @@ body {
 .portfolio-title {
   margin-bottom: 4px;
   color: var(--title-text-color);
-
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -535,11 +490,8 @@ body {
 
 .portfolio-link:hover .portfolio-content,
 .portfolio-link:focus .portfolio-content {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-/* -------------------ПОДВАЛ------------------- */
 
 .footer {
   padding: 60px 0;
@@ -576,7 +528,6 @@ body {
 .footer-link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -596,19 +547,17 @@ body {
 
 .social-link {
   color: var(--second-text-color);
-  background-color: rgba(100%, 100%, 100%, 10%);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mail-input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
-
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -631,7 +580,6 @@ body {
 .icon-send {
   margin-left: 10px;
 }
-/* -----------------МОДАЛЬНОЕ ОКНО--------------- */
 
 .backdrop {
   position: fixed;
@@ -640,8 +588,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -676,8 +623,6 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  cursor: pointer;
-
   padding: 0;
   width: 30px;
   height: 30px;
@@ -780,7 +725,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   line-height: 1.17;
 }
 
@@ -811,4 +755,4 @@ body {
 .button {
   display: block;
   margin: 0 auto;
-}
+}/*# sourceMappingURL=main.css.map */

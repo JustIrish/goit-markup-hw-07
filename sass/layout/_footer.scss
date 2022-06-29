@@ -1,0 +1,90 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--special-backgr-color);
+}
+
+.footer-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.bottom-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo-footer,
+.location {
+  color: var(--second-text-color);
+}
+
+.location,
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts,
+.location {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
+
+.actions-footer {
+  margin-bottom: 20px;
+  color: var(--second-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.social-link {
+  color: var(--second-text-color);
+  background-color: rgba(100%, 100%, 100%, 10%);
+}
+
+.mail-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mail-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.send-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
