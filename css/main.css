@@ -75,9 +75,7 @@ body {
   border: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background-color: #188ce8;
 }
 
@@ -152,8 +150,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:hover,
-.link:focus,
+.link:hover, .link:focus,
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
@@ -163,7 +160,6 @@ body {
   position: relative;
   color: var(--accent-color);
 }
-
 .current::after {
   display: block;
   content: "";
@@ -328,7 +324,6 @@ body {
   height: 44px;
   margin-left: 10px;
 }
-
 .soc-icon-item:first-child {
   margin-left: 0;
 }
@@ -345,15 +340,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.soc-icon-link:hover, .soc-icon-link:focus {
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+}
 
 .soc-icon {
   fill: currentColor;
-}
-
-.soc-icon-link:hover,
-.soc-icon-link:focus {
-  background-color: var(--accent-color);
-  color: var(--second-text-color);
 }
 
 .clients-icon-list {
@@ -381,15 +374,13 @@ body {
   border: 1px solid var(--link-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.clients-icon-link:hover, .clients-icon-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 
 .clients-icon {
   fill: currentColor;
-}
-
-.clients-icon-link:hover,
-.clients-icon-link:focus {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
 }
 
 .filter {
@@ -405,7 +396,6 @@ body {
 .filter-btn {
   color: var(--title-text-color);
   background-color: var(--portfolio-backgr-color);
-  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -418,9 +408,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   color: var(--second-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -458,9 +446,7 @@ body {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-link:hover .product-desc,
-.portfolio-link:focus .product-desc {
+.portfolio-link:hover .product-desc, .portfolio-link:focus .product-desc {
   transform: translateY(0);
 }
 
@@ -487,9 +473,7 @@ body {
 .portfolio-content {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-link:hover .portfolio-content,
-.portfolio-link:focus .portfolio-content {
+.portfolio-link:hover .portfolio-content, .portfolio-link:focus .portfolio-content {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -530,9 +514,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-link:hover,
-.footer-link:focus {
+.footer-link:hover, .footer-link:focus {
   color: var(--accent-color);
 }
 
@@ -562,7 +544,6 @@ body {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 .mail-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
@@ -591,10 +572,6 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -607,6 +584,9 @@ body {
   background-color: var(--main-backgr-color);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .is-hidden {
@@ -635,9 +615,7 @@ body {
   outline: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover, .modal-close-btn:focus {
   fill: var(--accent-color);
 }
 
@@ -666,6 +644,9 @@ body {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-input:focus + .input-icon {
+  fill: var(--accent-color);
+}
 
 .modal-label {
   display: block;
@@ -691,10 +672,6 @@ body {
   border-color: var(--accent-color);
 }
 
-.modal-input:focus + .input-icon {
-  fill: var(--accent-color);
-}
-
 .modal-text {
   width: 100%;
   height: 120px;
@@ -706,7 +683,6 @@ body {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-text::placeholder {
   font-size: 12px;
   line-height: 1.17;

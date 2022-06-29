@@ -33,13 +33,12 @@
 .footer-link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .actions-footer {
@@ -69,13 +68,13 @@
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-.mail-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
 }
 
 .send-btn {
