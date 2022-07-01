@@ -2,12 +2,12 @@
   background-color: var(--portfolio-backgr-color);
 }
 
-.team-list {
+.card-list {
   display: flex;
   margin: -15px;
 }
 
-.team-card {
+.card-list__item {
   flex-basis: calc(100% / 4 - 30px);
   margin: 15px;
 
@@ -17,11 +17,11 @@
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-desc {
+.card-list__desc {
   padding: 30px 0;
 }
 
-.team-name {
+.card-list__name {
   margin-bottom: 10px;
   color: var(--title-text-color);
 
@@ -31,19 +31,19 @@
   text-align: center;
 }
 
-.team-prof {
+.card-list__prof {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-.soc-icon-list {
+.soc-list {
   display: flex;
   justify-content: center;
 }
 
-.soc-icon-item {
+.soc-list__item {
   width: 44px;
   height: 44px;
   margin-left: 10px;
@@ -53,7 +53,7 @@
   }
 }
 
-.soc-icon-link {
+.soc-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,6 +73,6 @@
   }
 }
 
-.soc-icon {
+.soc-list__icon {
   fill: currentColor;
 }

@@ -1,18 +1,18 @@
-.clients-icon-list {
+.logo-list {
   display: flex;
   justify-content: center;
 }
 
-.clients-icon-item {
+.logo-list__item {
   width: 170px;
   height: 92px;
 }
 
-.clients-icon-item + .clients-icon-item {
+.logo-list__item + .logo-list__item {
   margin-left: 30px;
 }
 
-.clients-icon-link {
+.logo-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +32,6 @@
   }
 }
 
-.clients-icon {
+.logo-list__icon {
   fill: currentColor;
 }
